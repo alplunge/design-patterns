@@ -1,14 +1,20 @@
 package factory;
 
 public class NYPizzaStore extends PizzaStore {
+
     @Override
     public Pizza createPizza(String type) {
+        Pizza pizza;
+        PizzaIngredientFactory pizzaIngredientFactory = new NYPizzaIngredientFactory();
         if (type.equals("peperoni")) {
-            return new NYPepperoniPizza();
+            pizza = new PepperoniPizza(pizzaIngredientFactory);
+            pizza.setName("Ny Style pepperoni pizza");
         } else if (type.equals("cheese")) {
-            return new NYCheesePizza();
+            pizza = new CheesePizza(pizzaIngredientFactory);
+            pizza.setName("NY style cheese pizza");
         } else {
-            return null;
+            pizza = null;
         }
+        return pizza;
     }
 }

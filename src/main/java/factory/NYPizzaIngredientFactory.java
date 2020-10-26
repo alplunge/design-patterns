@@ -1,5 +1,7 @@
 package factory;
 
+import factory.ingredients.*;
+
 public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDough() {
@@ -17,8 +19,8 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     }
 
     @Override
-    public Veggies[] createVeggies() {
-        Veggies[] veggies = {new Garlic(), new Onion(), new Mushroom(), new RedPepper()};
+    public Veggi[] createVeggies() {
+        Veggi[] veggies = {new Garlic(), new Onion(), new Mushroom(), new RedPepper()};
         return veggies;
     }
 
@@ -28,7 +30,7 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     }
 
     @Override
-    public Clams createClams() {
-        return new FreshClams();
+    public Clam createClams() {
+        return new FreshClam();
     }
 }

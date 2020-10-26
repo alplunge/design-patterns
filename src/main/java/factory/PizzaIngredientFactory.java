@@ -1,5 +1,7 @@
 package factory;
 
+import factory.ingredients.*;
+
 public interface PizzaIngredientFactory {
     Dough createDough();
 
@@ -7,9 +9,9 @@ public interface PizzaIngredientFactory {
 
     Cheese createCheese();
 
-    Veggies[] createVeggies();
+    Veggi[] createVeggies();
 
     Pepperoni createPepperoni();
 
-    Clams createClams();
+    Clam createClams();
 }

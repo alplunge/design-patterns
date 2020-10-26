@@ -1,12 +1,18 @@
 package factory;
 
-import java.util.Arrays;
+import factory.ingredients.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@ToString
 public abstract class Pizza {
    String name;
    Dough dough;
    Sauce sauce;
-   Veggies [] veggies;
+   Veggi[] veggies;
    Cheese cheese;
    Pepperoni pepperoni;
    Clam clam;
@@ -22,24 +28,4 @@ public abstract class Pizza {
       System.out.println("Placing pizza to pizza box");
    };
 
-   public String getName() {
-      return name;
-   }
-
-   public void setName(String name) {
-      this.name = name;
-   }
-
-   @Override
-   public String toString() {
-      return "Pizza{" +
-              "name='" + name + '\'' +
-              ", dough=" + dough +
-              ", sauce=" + sauce +
-              ", veggies=" + Arrays.toString(veggies) +
-              ", cheese=" + cheese +
-              ", pepperoni=" + pepperoni +
-              ", clam=" + clam +
-              '}';
-   }
 }
